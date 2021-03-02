@@ -3,6 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JMenu;
@@ -16,6 +17,7 @@ import javax.swing.WindowConstants;
 public class Ventana extends JFrame{
 
 	JMenuBar menuBar;
+	JInternalFrame IF_Dentro;
 	JMenu menuMasters, menuBooking, menuTestPerform, menuPrinting, menuLaoReports,
           menuSettings, menuUtilities, menuWindow, menuHelp, menuTransaction;
 
@@ -26,7 +28,7 @@ public class Ventana extends JFrame{
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize(1200, 700);
 		setLocationRelativeTo(null);
-		setTitle("InternalFrames");
+		setTitle("TareaInternalFrames");
 		setVisible(true);
 
 		menuBar = new JMenuBar();
@@ -53,6 +55,11 @@ public class Ventana extends JFrame{
 	    menuBar.add(menuHelp);
 	    
 	    setJMenuBar(menuBar);
+	    
+	    // ---------- PARA INTERNALFAMES ---------------
+	 	JDesktopPane dp = new JDesktopPane();
+	 	
+	 	
 		
 	}
 
