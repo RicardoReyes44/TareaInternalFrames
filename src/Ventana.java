@@ -9,8 +9,8 @@ import javax.swing.JTextField;
 public class Ventana extends JFrame{
 
 	JMenuBar menuBar;
-	JMenu menuConversores;
-	JMenuItem menuItemDistancias, menuItemTemperaturas, menuItemMoneda;
+	JMenu menuMasters, menuBooking, menuTestPerform, menuPrinting, menuLaoReports,
+          menuSettings, menuUtilities, menuWindow, menuHelp;
 	
 	public Ventana() {
 		
