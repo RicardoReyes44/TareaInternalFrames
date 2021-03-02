@@ -51,6 +51,7 @@ public class Ventana extends JFrame{
 	    menuBar.add(menuUtilities);
 	    menuBar.add(menuWindow);
 	    menuBar.add(menuHelp);
+	    
 	    setJMenuBar(menuBar);
 		
 	}
