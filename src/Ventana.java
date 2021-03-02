@@ -45,7 +45,7 @@ public class Ventana extends JFrame{
 
 		getContentPane().setLayout(new BorderLayout());
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setSize(1200, 720);
+		setSize(1350, 720);
 		setLocationRelativeTo(null);
 		setTitle("TareaInternalFrames");
 		setVisible(true);
@@ -72,18 +72,20 @@ public class Ventana extends JFrame{
 	    menuBar.add(menuUtilities);
 	    menuBar.add(menuWindow);
 	    menuBar.add(menuHelp);
+	    menuBar.add(new JButton("AS"));
+	    
 	    
 	    setJMenuBar(menuBar);
 	    
-	    // ---------- PARA INTERNALFAMES ---------------
+	    // ---------- Barra de herramientas ---------------
 	 	JDesktopPane dp = new JDesktopPane();
 	 	
 	 	IF_Dentro = new JInternalFrame();
 		IF_Dentro.getContentPane().setLayout(new FlowLayout());
 		                                             // HIDE_ON_CLOSE para cerrar, pero se puede volver a abrir
 		IF_Dentro.setDefaultCloseOperation(HIDE_ON_CLOSE);
-		IF_Dentro.setSize(700, 100);
-		IF_Dentro.setTitle("");
+		IF_Dentro.setSize(900, 70);
+		IF_Dentro.setTitle("Barra de herramientas");
 		
 		// Boton para minimizar y convertir en icono
 		IF_Dentro.setIconifiable(true);
@@ -96,12 +98,34 @@ public class Ventana extends JFrame{
 		
 		IF_Dentro.setVisible(true);
 		
-		panel = new JPanel();
-    	panel.setBackground(Color.BLUE);
-    	panel.setLayout(new FlowLayout());
-    	panel.setPreferredSize(new Dimension(150, 300));
-        dp.add(panel);
-		
+        btnAdd = new JButton("Add");
+        btnEdit = new JButton("Edit");
+        btnBack = new JButton("Back");
+        btnNext = new JButton("Next");
+        btnList = new JButton("List");
+        btnSave = new JButton("Save");
+        btnPrint = new JButton("Print");
+        btnTest = new JButton("Test");
+        btnCancel = new JButton("Cancel");
+        btnSettings = new JButton("Settings");
+        btnDelete = new JButton("Delete");
+        btnSlip = new JButton("Slip");
+        btnExit = new JButton("Exit");
+        
+        IF_Dentro.add(btnAdd);
+        IF_Dentro.add(btnEdit);
+        IF_Dentro.add(btnBack);
+        IF_Dentro.add(btnNext);
+        IF_Dentro.add(btnList);
+        IF_Dentro.add(btnSave);
+        IF_Dentro.add(btnPrint);
+        IF_Dentro.add(btnTest);
+        IF_Dentro.add(btnCancel);
+        IF_Dentro.add(btnSettings);
+        IF_Dentro.add(btnDelete);
+        IF_Dentro.add(btnSlip);
+        IF_Dentro.add(btnExit);
+        
     	dp.add(IF_Dentro);
 		add(dp, BorderLayout.CENTER);
 		
