@@ -29,7 +29,7 @@ public class Ventana extends JFrame{
 
 	JMenuBar menuBar;
 	JInternalFrame IF_Dentro;
-	JPanel panel, panel2, panel3, panel4;
+	JPanel panel, panel2, panel3;
 	JToolBar barraDeHerramientas;
 	JMenu menuMasters, menuBooking, menuTestPerform, menuPrinting, menuLaoReports,
           menuSettings, menuUtilities, menuWindow, menuHelp, menuTransaction;
@@ -145,7 +145,27 @@ public class Ventana extends JFrame{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+    	
+    	// paneles
+    	
+    	panel = new JPanel();
+    	panel.setBackground(new Color(213, 245, 227));
+    	panel.setPreferredSize(new Dimension(1300, 200));
+    	
+    	IF_Dentro.add(panel);
+    	
+    	panel2 = new JPanel();
+    	panel2.setBackground(new Color(162, 217, 206));
+    	panel2.setPreferredSize(new Dimension(1300, 250));
+    	
+    	IF_Dentro.add(panel2);
+    	
+    	panel3 = new JPanel();
+    	panel3.setBackground(new Color(212, 230, 241));
+    	panel3.setPreferredSize(new Dimension(1300, 120));
+    	
+    	IF_Dentro.add(panel3);
+    	
     	add(dp, BorderLayout.CENTER);
 		
 	}
