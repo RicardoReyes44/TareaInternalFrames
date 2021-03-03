@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
@@ -28,8 +29,6 @@ public class Ventana extends JFrame{
 	JMenuBar menuBar;
 	JInternalFrame IF_Dentro;
 	JPanel panel;
-	GridBagConstraints gbc = new GridBagConstraints();
-	GridBagLayout gbl = new GridBagLayout();
 	JToolBar barraDeHerramientas;
 	JMenu menuMasters, menuBooking, menuTestPerform, menuPrinting, menuLaoReports,
           menuSettings, menuUtilities, menuWindow, menuHelp, menuTransaction;
@@ -49,10 +48,6 @@ public class Ventana extends JFrame{
 
 	public Ventana() {
 
-		barraDeHerramientas = new JToolBar("Barra de herramientas");
-		barraDeHerramientas.add(new JButton("AS"));
-
-		getContentPane().setLayout(gbl);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize(1350, 720);
 		setLocationRelativeTo(null);
@@ -70,7 +65,10 @@ public class Ventana extends JFrame{
 	    menuUtilities = new JMenu("Utilities");
 	    menuWindow = new JMenu("Window");
 	    menuHelp = new JMenu("Help");
-
+	    
+	    barraDeHerramientas = new JToolBar("Barra de herramientas");
+		barraDeHerramientas.add(new JButton("AS"));
+		
 	    btnAdd = new JButton("Add");
         btnEdit = new JButton("Edit");
         btnBack = new JButton("Back");
@@ -109,12 +107,12 @@ public class Ventana extends JFrame{
 	    menuBar.add(menuUtilities);
 	    menuBar.add(menuWindow);
 	    menuBar.add(menuHelp);
-	    menuBar.add(barraDeHerramientas);
+	    menuHelp.addSeparator();
 	    
+	    getContentPane().add(barraDeHerramientas, BorderLayout.NORTH);
 	    
 	    setJMenuBar(menuBar);
 	    
-
 	 	JDesktopPane dp = new JDesktopPane();
 
 	 	IF_Dentro = new JInternalFrame();
@@ -136,8 +134,7 @@ public class Ventana extends JFrame{
 		IF_Dentro.setVisible(true);
         
     	dp.add(IF_Dentro);
-		add(dp, BorderLayout.CENTER);
 		
 	}
-
+	
 }
