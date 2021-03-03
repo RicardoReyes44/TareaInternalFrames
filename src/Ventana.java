@@ -8,6 +8,8 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.beans.PropertyVetoException;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JDesktopPane;
@@ -119,7 +121,6 @@ public class Ventana extends JFrame{
 		IF_Dentro.getContentPane().setLayout(new FlowLayout());		
 		                                             // HIDE_ON_CLOSE para cerrar, pero se puede volver a abrir
 		IF_Dentro.setDefaultCloseOperation(HIDE_ON_CLOSE);
-		IF_Dentro.setSize(900, 70);
 		IF_Dentro.setTitle("");
 		
 		// Boton para minimizar y convertir en icono
@@ -132,8 +133,17 @@ public class Ventana extends JFrame{
 		IF_Dentro.setClosable(true);
 		
 		IF_Dentro.setVisible(true);
-        
+		
     	dp.add(IF_Dentro);
+    	
+    	try {
+			IF_Dentro.setMaximum(true);
+		} catch (PropertyVetoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+    	add(dp, BorderLayout.CENTER);
 		
 	}
 	
