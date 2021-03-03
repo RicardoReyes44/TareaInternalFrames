@@ -9,7 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JDesktopPane;
@@ -30,7 +29,7 @@ public class Ventana extends JFrame{
 
 	JMenuBar menuBar;
 	JInternalFrame IF_Dentro;
-	JPanel panel;
+	JPanel panel, panel2, panel3, panel4;
 	JToolBar barraDeHerramientas;
 	JMenu menuMasters, menuBooking, menuTestPerform, menuPrinting, menuLaoReports,
           menuSettings, menuUtilities, menuWindow, menuHelp, menuTransaction;
@@ -115,9 +114,13 @@ public class Ventana extends JFrame{
 	    
 	    setJMenuBar(menuBar);
 	    
+	    // JDesktopPane
+	    
 	 	JDesktopPane dp = new JDesktopPane();
 
 	 	IF_Dentro = new JInternalFrame();
+	 	
+	 	// JInternalFrame
 		IF_Dentro.getContentPane().setLayout(new FlowLayout());		
 		                                             // HIDE_ON_CLOSE para cerrar, pero se puede volver a abrir
 		IF_Dentro.setDefaultCloseOperation(HIDE_ON_CLOSE);
