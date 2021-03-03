@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
@@ -323,6 +324,41 @@ public class Ventana extends JFrame{
     	panel3 = new JPanel();
     	panel3.setBackground(new Color(212, 230, 241));
     	panel3.setPreferredSize(new Dimension(1300, 120));
+    	panel3.setLayout(gbl);
+    	
+    	JLabel lbl34 = new JLabel("Home Collection");
+    	JLabel lbl35 = new JLabel("Paid");
+    	JLabel lbl36 = new JLabel("Pay Type");
+    	JLabel lbl37 = new JLabel("Receipt No.");
+    	
+    	JTextField txt22 = new JTextField(10);
+    	JTextField txt23 = new JTextField(10);
+    	JTextField txt24 = new JTextField(10);
+
+    	JTextArea ta2 = new JTextArea(5, 115);
+    	ta2.setBackground(new Color(0, 0, 139));
+    	ta2.setForeground(new Color(250, 250, 250));
+    	ta2.insert("Aqui van comandos",0);
+    	
+    	String elementos4[] = {"CASH"};
+    	JComboBox <String>cmb4 = new JComboBox<String>(elementos4);
+    	
+    	alinear(panel3, 0, 0, 1, 1, lbl34, gbc, gbl);
+    	alinear(panel3, 3, 0, 1, 1, lbl35, gbc, gbl);
+    	alinear(panel3, 6, 0, 1, 1, lbl36, gbc, gbl);
+    	alinear(panel3, 9, 0, 1, 1, lbl37, gbc, gbl);
+    	
+    	alinear(panel3, 1, 0, 1, 1, txt22, gbc, gbl);
+    	alinear(panel3, 4, 0, 1, 1, txt23, gbc, gbl);
+    	alinear(panel3, 7, 0, 1, 1, cmb4, gbc, gbl);
+    	alinear(panel3, 10, 0, 1, 1, txt24, gbc, gbl);
+    	
+    	alinear(panel3, 0, 1, 12, 1, ta2, gbc, gbl);
+    	
+    	alinear(panel3, 2, 0, 1, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel3, 5, 0, 1, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel3, 8, 0, 1, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel3, 11, 0, 1, 1, new JLabel("              "), gbc, gbl);
     	
     	IF_Dentro.add(panel3);
     	
