@@ -6,11 +6,13 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
@@ -45,7 +47,7 @@ public class Ventana extends JFrame{
 	JButton btnList;
 	JButton btnSave;
 	JButton btnPrint;
-	JButton btnTest;
+	JButton btnLest;
 	JButton btnCancel;
 	JButton btnSettings;
 	JButton btnDelete;
@@ -73,21 +75,34 @@ public class Ventana extends JFrame{
 	    menuHelp = new JMenu("Help");
 	    
 	    barraDeHerramientas = new JToolBar("Barra de herramientas");
-		barraDeHerramientas.add(new JButton("AS"));
 		
-	    btnAdd = new JButton("Add");
-        btnEdit = new JButton("Edit");
-        btnBack = new JButton("Back");
-        btnNext = new JButton("Next");
-        btnList = new JButton("List");
-        btnSave = new JButton("Save");
-        btnPrint = new JButton("Print");
-        btnTest = new JButton("Test");
-        btnCancel = new JButton("Cancel");
-        btnSettings = new JButton("Settings");
-        btnDelete = new JButton("Delete");
-        btnSlip = new JButton("Slip");
-        btnExit = new JButton("Exit");
+	    btnAdd = new JButton();
+        btnEdit = new JButton();
+        btnBack = new JButton();
+        btnNext = new JButton();
+        btnList = new JButton();
+        btnSave = new JButton();
+        btnPrint = new JButton();
+        btnLest = new JButton();
+        btnCancel = new JButton();
+        btnSettings = new JButton();
+        btnDelete = new JButton();
+        btnSlip = new JButton();
+        btnExit = new JButton();
+        
+        ImageIcon ic = new ImageIcon("./image/images.png");
+        ImageIcon ic2 = new ImageIcon("./image/carpeta.png");
+        ImageIcon ic3 = new ImageIcon("./image/back.png");
+        ImageIcon ic4 = new ImageIcon("./image/next.png");
+        ImageIcon ic5 = new ImageIcon("./image/list.png");
+        ImageIcon ic6 = new ImageIcon("./image/save.png");
+        ImageIcon ic7 = new ImageIcon("./image/print.png");
+        ImageIcon ic8 = new ImageIcon("./image/lest.png");
+        ImageIcon ic9 = new ImageIcon("./image/cancel.png");
+        ImageIcon ic10 = new ImageIcon("./image/settings.png");
+        ImageIcon ic11 = new ImageIcon("./image/delete.png");
+        ImageIcon ic12 = new ImageIcon("./image/slip.png");
+        ImageIcon ic13 = new ImageIcon("./image/exit.png");
         
         barraDeHerramientas.add(btnAdd);
         barraDeHerramientas.add(btnEdit);
@@ -96,13 +111,40 @@ public class Ventana extends JFrame{
         barraDeHerramientas.add(btnList);
         barraDeHerramientas.add(btnSave);
         barraDeHerramientas.add(btnPrint);
-        barraDeHerramientas.add(btnTest);
+        barraDeHerramientas.add(btnLest);
         barraDeHerramientas.add(btnCancel);
         barraDeHerramientas.add(btnSettings);
         barraDeHerramientas.add(btnDelete);
         barraDeHerramientas.add(btnSlip);
         barraDeHerramientas.add(btnExit);
-	    
+
+        btnAdd.setSize(30,  30);
+    	btnAdd.setIcon(new ImageIcon(ic.getImage().getScaledInstance(btnAdd.getWidth(), btnAdd.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnEdit.setSize(30,  30);
+    	btnEdit.setIcon(new ImageIcon(ic2.getImage().getScaledInstance(btnEdit.getWidth(), btnEdit.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnBack.setSize(30,  30);
+    	btnBack.setIcon(new ImageIcon(ic3.getImage().getScaledInstance(btnBack.getWidth(), btnBack.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnNext.setSize(30,  30);
+    	btnNext.setIcon(new ImageIcon(ic4.getImage().getScaledInstance(btnNext.getWidth(), btnNext.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnList.setSize(30,  30);
+    	btnList.setIcon(new ImageIcon(ic5.getImage().getScaledInstance(btnList.getWidth(), btnList.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnSave.setSize(30,  30);
+    	btnSave.setIcon(new ImageIcon(ic6.getImage().getScaledInstance(btnSave.getWidth(), btnSave.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnPrint.setSize(30,  30);
+    	btnPrint.setIcon(new ImageIcon(ic7.getImage().getScaledInstance(btnPrint.getWidth(), btnPrint.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnLest.setSize(30,  30);
+    	btnLest.setIcon(new ImageIcon(ic8.getImage().getScaledInstance(btnLest.getWidth(), btnLest.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnCancel.setSize(30,  30);
+    	btnCancel.setIcon(new ImageIcon(ic9.getImage().getScaledInstance(btnCancel.getWidth(), btnCancel.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnSettings.setSize(30,  30);
+    	btnSettings.setIcon(new ImageIcon(ic10.getImage().getScaledInstance(btnSettings.getWidth(), btnSettings.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnDelete.setSize(30,  30);
+    	btnDelete.setIcon(new ImageIcon(ic11.getImage().getScaledInstance(btnDelete.getWidth(), btnDelete.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnSlip.setSize(30,  30);
+    	btnSlip.setIcon(new ImageIcon(ic12.getImage().getScaledInstance(btnSlip.getWidth(), btnSlip.getHeight() ,Image.SCALE_SMOOTH)));
+    	btnExit.setSize(30,  30);
+    	btnExit.setIcon(new ImageIcon(ic13.getImage().getScaledInstance(btnExit.getWidth(), btnExit.getHeight() ,Image.SCALE_SMOOTH)));
+    	
 	    menuBar.add(menuMasters);
 	    menuBar.add(menuBooking);
 	    menuBar.add(menuTestPerform);
@@ -363,7 +405,7 @@ public class Ventana extends JFrame{
     	IF_Dentro.add(panel3);
     	
     	// -------------------------------------
-    	
+    	//btnAdd.setIcon(new ImageIcon(ic.getImage().getScaledInstance(btnAdd.getWidth(), btnAdd.getHeight() ,Image.SCALE_SMOOTH)));
     	add(dp, BorderLayout.CENTER);
 		
 	}
