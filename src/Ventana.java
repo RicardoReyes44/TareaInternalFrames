@@ -264,10 +264,57 @@ public class Ventana extends JFrame{
     	panel2.setLayout(gbl);
     	
     	JTextArea ta = new JTextArea(15, 60);
-    	
-    	alinear(panel2, 0, 0, 1, 1, ta, gbc, gbl);
+    	ta.setBackground(new Color(230, 230, 230));
+    	alinear(panel2, 0, 0, 1, 14, ta, gbc, gbl);
+    	alinear(panel2, 1, 0, 1, 1, new JLabel("              "), gbc, gbl);
     	ta.insert("Aqui va una tabla",0);
-    	alinear(panel2, 1, 0, 1, 1, new JButton("A"), gbc, gbl);
+    	
+    	JLabel lbl27 = new JLabel("Lotal ledd");
+    	JLabel lbl28 = new JLabel("lest Amt.");
+    	JLabel lbl29 = new JLabel("Concession");
+    	JLabel lbl30 = new JLabel("Home Collection");
+    	JLabel lbl31 = new JLabel("lax Amt");
+    	JLabel lbl32 = new JLabel("Net Amt");
+    	JLabel lbl33 = new JLabel("Balance");
+    	
+    	JTextField txt15 = new JTextField(10);
+    	JTextField txt16 = new JTextField(10);
+    	JTextField txt17 = new JTextField(10);
+    	JTextField txt18 = new JTextField(10);
+    	JTextField txt19 = new JTextField(10);
+    	JTextField txt20 = new JTextField(10);
+    	JTextField txt21 = new JTextField(10);
+    	
+    	txt15.setBackground(new Color(0, 0, 139));
+    	txt16.setBackground(new Color(0, 0, 139));
+    	txt17.setBackground(new Color(0, 0, 139));
+    	txt18.setBackground(new Color(0, 0, 139));
+    	txt19.setBackground(new Color(0, 0, 139));
+    	txt20.setBackground(new Color(0, 0, 139));
+    	txt21.setBackground(new Color(0, 0, 139));
+
+    	alinear(panel2, 2, 0, 1, 1, lbl27, gbc, gbl);
+    	alinear(panel2, 2, 2, 1, 1, lbl28, gbc, gbl);
+    	alinear(panel2, 2, 4, 1, 1, lbl29, gbc, gbl);
+    	alinear(panel2, 2, 6, 1, 1, lbl30, gbc, gbl);
+    	alinear(panel2, 2, 8, 1, 1, lbl31, gbc, gbl);
+    	alinear(panel2, 2, 10, 1, 1, lbl32, gbc, gbl);
+    	alinear(panel2, 2, 12, 1, 1, lbl33, gbc, gbl);
+    	
+    	alinear(panel2, 3, 0, 1, 1, txt15, gbc, gbl);
+    	alinear(panel2, 3, 2, 1, 1, txt16, gbc, gbl);
+    	alinear(panel2, 3, 4, 1, 1, txt17, gbc, gbl);
+    	alinear(panel2, 3, 6, 1, 1, txt18, gbc, gbl);
+    	alinear(panel2, 3, 8, 1, 1, txt19, gbc, gbl);
+    	alinear(panel2, 3, 10, 1, 1, txt20, gbc, gbl);
+    	alinear(panel2, 3, 12, 1, 1, txt21, gbc, gbl);
+    	
+    	alinear(panel2, 2, 1, 2, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel2, 2, 3, 2, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel2, 2, 5, 2, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel2, 2, 7, 2, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel2, 2, 9, 2, 1, new JLabel("              "), gbc, gbl);
+    	alinear(panel2, 2, 11, 2, 1, new JLabel("              "), gbc, gbl);
     	
     	IF_Dentro.add(panel2);
     	
@@ -276,8 +323,6 @@ public class Ventana extends JFrame{
     	panel3 = new JPanel();
     	panel3.setBackground(new Color(212, 230, 241));
     	panel3.setPreferredSize(new Dimension(1300, 120));
-    	
-    	
     	
     	IF_Dentro.add(panel3);
     	
@@ -293,8 +338,6 @@ public class Ventana extends JFrame{
 		gbc.gridwidth = width;
 		gbc.gridx = x;
 		gbc.gridy = y;
-		
-		gbc.anchor = GridBagConstraints.WEST;
 		
 		gbl.setConstraints(componente, gbc);
 		panel.add(componente, gbc);
