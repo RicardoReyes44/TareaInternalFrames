@@ -11,6 +11,8 @@ import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -19,6 +21,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.KeyStroke;
@@ -152,21 +156,148 @@ public class Ventana extends JFrame{
     	panel.setBackground(new Color(213, 245, 227));
     	panel.setPreferredSize(new Dimension(1300, 200));
     	
+    	JLabel lbl = new JLabel("Patient ID");
+    	JLabel lbl2 = new JLabel("Date");
+    	JLabel lbl3 = new JLabel("*Time(hh:mm)");
+    	JLabel lbl4 = new JLabel("Name");
+    	JLabel lbl5 = new JLabel("Sex");
+    	JLabel lbl6 = new JLabel("Age");
+    	JLabel lbl7 = new JLabel("Mons");
+    	JLabel lbl8 = new JLabel("Days");
+    	JLabel lbl9 = new JLabel("Sample By");
+    	JLabel lbl10 = new JLabel("Referred By");
+    	JLabel lbl11 = new JLabel("Panel Code");
+    	JLabel lbl12 = new JLabel("Panel ID");
+    	JLabel lbl13 = new JLabel("e-mail");
+    	JLabel lbl14 = new JLabel("Lab No");
+    	JLabel lbl16 = new JLabel(":");
+    	
+    	JLabel lbl15 = new JLabel("     ");
+    	JLabel lbl17 = new JLabel("     ");
+    	JLabel lbl19 = new JLabel("     ");
+    	JLabel lbl18 = new JLabel("                                                                                                                                                                                                             ");
+    	JLabel lbl22 = new JLabel("                                                                                                                                                                                                         ");
+    	JLabel lbl25 = new JLabel("                                                                                                                                                                                   ");
+    	JLabel lbl20 = new JLabel("                                                                                                                                                                                                                                                                                                                                    ");
+    	JLabel lbl21 = new JLabel("                                                               ");
+    	JLabel lbl24 = new JLabel("                                                  ");
+    	JLabel lbl23 = new JLabel("                                                                                                                                                                                                                                                                ");
+    	JLabel lbl26 = new JLabel("                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ");
+    	
+    	JTextField txt = new JTextField(10);
+    	JTextField txt2 = new JTextField(10);
+    	JTextField txt3 = new JTextField(20);
+    	JTextField txt4 = new JTextField("0", 3);
+    	JTextField txt5 = new JTextField("0", 3);
+    	JTextField txt6 = new JTextField("0", 3);
+    	JTextField txt7 = new JTextField(10);
+    	JTextField txt8 = new JTextField(10);
+    	JTextField txt9 = new JTextField(15);
+    	JTextField txt10= new JTextField("0", 1);
+    	JTextField txt11 = new JTextField("0", 1);
+    	JTextField txt12 = new JTextField(10);
+    	JTextField txt13 = new JTextField(10);
+    	JTextField txt14 = new JTextField(10);
+    	
+    	String elementos[] = {"*2/01/2012"};
+    	JComboBox <String>cmb = new JComboBox<String>(elementos);
+    	
+    	String elementos2[] = {"MR."};
+    	JComboBox <String>cmb2 = new JComboBox<String>(elementos2);
+    	
+    	String elementos3[] = {"MALE"};
+    	JComboBox <String>cmb3 = new JComboBox<String>(elementos3);
+    	
+    	panel.add(lbl);
+    	panel.add(txt);
+    	panel.add(lbl15);
+    	panel.add(lbl2);
+    	panel.add(cmb);
+    	panel.add(lbl19);
+    	panel.add(lbl3);
+    	panel.add(txt10);
+    	panel.add(lbl16);
+    	panel.add(txt11);
+    	panel.add(lbl17);
+    	panel.add(lbl14);
+    	panel.add(txt2);
+    	panel.add(lbl18);
+    	panel.add(lbl4);
+    	panel.add(cmb2);
+    	panel.add(txt3);
+    	panel.add(lbl20);
+    	panel.add(lbl5);
+    	panel.add(cmb3);
+    	panel.add(lbl6);
+    	panel.add(txt4);
+    	panel.add(lbl7);
+    	panel.add(txt5);
+    	panel.add(lbl8);
+    	panel.add(txt6);
+    	panel.add(lbl21);
+    	panel.add(lbl9);
+    	panel.add(txt7);
+    	panel.add(lbl22);
+    	panel.add(lbl10);
+    	panel.add(txt8);
+    	panel.add(txt9);
+    	txt9.setEnabled(false);
+    	panel.add(lbl24);
+    	panel.add(lbl11);
+    	panel.add(txt12);
+    	panel.add(lbl25);
+    	panel.add(lbl12);
+    	panel.add(txt13);
+    	panel.add(lbl26);
+    	panel.add(lbl13);
+    	panel.add(txt14);
+	
     	IF_Dentro.add(panel);
+    	
+    	// -------------------------------------
     	
     	panel2 = new JPanel();
     	panel2.setBackground(new Color(162, 217, 206));
     	panel2.setPreferredSize(new Dimension(1300, 250));
+    	GridBagLayout gbl = new GridBagLayout();
+    	GridBagConstraints gbc = new GridBagConstraints();
+    	panel2.setLayout(gbl);
+    	
+    	JTextArea ta = new JTextArea(15, 60);
+    	
+    	alinear(panel2, 0, 0, 1, 1, ta, gbc, gbl);
+    	ta.insert("Aqui va una tabla",0);
+    	alinear(panel2, 1, 0, 1, 1, new JButton("A"), gbc, gbl);
     	
     	IF_Dentro.add(panel2);
+    	
+    	// -------------------------------------
     	
     	panel3 = new JPanel();
     	panel3.setBackground(new Color(212, 230, 241));
     	panel3.setPreferredSize(new Dimension(1300, 120));
     	
+    	
+    	
     	IF_Dentro.add(panel3);
     	
+    	// -------------------------------------
+    	
     	add(dp, BorderLayout.CENTER);
+		
+	}
+	
+	public void alinear(JPanel panel, int x, int y, int width, int height, Component componente, GridBagConstraints gbc, GridBagLayout gbl) {
+		
+		gbc.gridheight = height;
+		gbc.gridwidth = width;
+		gbc.gridx = x;
+		gbc.gridy = y;
+		
+		gbc.anchor = GridBagConstraints.WEST;
+		
+		gbl.setConstraints(componente, gbc);
+		panel.add(componente, gbc);
 		
 	}
 	
